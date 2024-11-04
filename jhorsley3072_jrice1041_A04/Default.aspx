@@ -4,8 +4,8 @@
 
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
+            <h1 id="aspnetTitle">Hi-Lo (Revisited Again)</h1>
+            <p class="lead">Welcome to the third iteration of our Hi-Lo game, will we ever  escape this nightmare? probabaly not.</p>
             <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
         </section>
 
