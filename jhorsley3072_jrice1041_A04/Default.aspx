@@ -4,24 +4,23 @@
 
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">Hi-Lo (Revisited Again)</h1>
-            <p class="lead">Welcome to the third iteration of our Hi-Lo game, will we ever  escape this nightmare? probabaly not.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Start the nightmare &raquo;</a></p>
+            <asp:Panel ID="Panel1" runat="server" style="text-align: center">
+                <asp:Label ID="Label1" runat="server" Text="Please enter your name:"></asp:Label>
+                <br />
+                <br />
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+            </asp:Panel>
+            <asp:Panel ID="Panel2" runat="server" style="text-align: center">
+                Please enter a max guess (1-999):<br />
+                <br />
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            </asp:Panel>
+            <asp:Panel ID="Panel3" runat="server" style="text-align: center">
+                Please enter your next guess:<br />
+                <br />
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+            </asp:Panel>
         </section>
-
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    FART FART FART FART FART FART FART FART FART FART FART FART 
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-           
-          
-        </div>
     </main>
 
 </asp:Content>
