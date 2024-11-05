@@ -22,7 +22,6 @@ namespace jhorsley3072_jrice1041_A04
         internal int MinGuess { get { return minGuess; } }//READONLY
         internal int MaxGuess { get; set; }//MaxGuess set by player, later used in the game
 
-
         //BOUNDARIES UPDATED DURING GUESS LOOP
         internal int LowBoundary { get; set; }
         internal int HighBoundary { get; set; }
@@ -31,6 +30,5 @@ namespace jhorsley3072_jrice1041_A04
         {
             this.State = GameState.Start;
         }
-
     }
 }
