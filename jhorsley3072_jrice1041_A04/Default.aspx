@@ -8,7 +8,7 @@
                 <asp:Label ID="Label1" runat="server" Text="Please enter your name:"></asp:Label>
                 <br />
                 <br />
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
             </asp:Panel>
             <asp:Panel ID="Panel2" runat="server" style="text-align: center">
                 Please enter a max guess (1-999):<br />
