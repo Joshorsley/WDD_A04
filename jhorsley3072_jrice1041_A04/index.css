@@ -1,4 +1,55 @@
-#Label1 {
-    font-size: 32px;
-    color: red;
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+   
+}
+
+.navbar {
+    background: linear-gradient( to bottom, #FFCC33 20%, #FF9933 20% 40%, #FF6633 40% 60%, #CC3333 60% 80%, #336699 80% 100% );
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    padding: 0 20px; 
+}
+
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+    border-radius: 15px;
+    border: 5px solid black;
+    max-width: 90%; 
+    box-sizing: border-box; 
+}
+
+.navbar-brand {
+    font-family: "Bagel Fat One", system-ui;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+
+.titleword {
+    display: block;
+    line-height: 1;
+    font-size: 20px;
+}
+
+.gameword {
+    font-family: "Miniver", cursive;
+    font-size: 20px;
+    display: block;
+    line-height: 1;
+    margin-top: -5px;
+    color: black;
 }
