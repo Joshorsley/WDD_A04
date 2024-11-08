@@ -4,21 +4,71 @@
 
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
-            <asp:Panel ID="Panel1" runat="server" style="text-align: center">
-                <asp:Label ID="Label1" runat="server" Text="Please enter your name:"></asp:Label>
+            <asp:Panel 
+                ID="Panel_Name" 
+                runat="server" 
+                style="text-align: center" 
+                Visible="true">
+                <asp:Label 
+                    ID="Label1" 
+                    runat="server" 
+                    Text="Please enter your name:">
+                </asp:Label>
                 <br />
                 <br />
-                <asp:TextBox ID="TextBox1" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+                <asp:TextBox 
+                    ID="Input_Name" 
+                    runat="server">
+                </asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator 
+                    ID="RequiredFieldValidator1" 
+                    runat="server" 
+                    ControlToValidate="Input_Name"
+                    ErrorMessage="RequiredFieldValidator"
+                    ValidationGroup="ValidationGroup_Name">
+                </asp:RequiredFieldValidator>
+                <br />
+                <asp:CustomValidator 
+                    ID="Validator_Name" 
+                    CssClass="validator" 
+                    runat="server" 
+                    ErrorMessage="Name must not contain any blank characters."
+                    OnServerValidate="Validator_Name_ServerValidate"
+                    ValidationGroup="ValidationGroup_Name">
+                </asp:CustomValidator>
+                <br />
+                <asp:Button 
+                    ID="Submit_Name"
+                    runat="server" 
+                    OnClick="Submit_Name_Click" 
+                    Text="Submit"
+                    ValidationGroup="ValidationGroup_Name"/>
             </asp:Panel>
-            <asp:Panel ID="Panel2" runat="server" style="text-align: center">
+
+            <asp:Panel 
+                ID="Panel_MaxGuess" 
+                runat="server" 
+                style="text-align: center"
+                Visible="false">
                 Please enter a max guess (1-999):<br />
                 <br />
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox 
+                    ID="TextBox2" 
+                    runat="server">
+                </asp:TextBox>
             </asp:Panel>
-            <asp:Panel ID="Panel3" runat="server" style="text-align: center">
+            <asp:Panel 
+                ID="Panel_Guess" 
+                runat="server" 
+                style="text-align: center"
+                Visible="false">
                 Please enter your next guess:<br />
                 <br />
-                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                <asp:TextBox 
+                    ID="TextBox3" 
+                    runat="server">
+                </asp:TextBox>
             </asp:Panel>
         </section>
     </main>
