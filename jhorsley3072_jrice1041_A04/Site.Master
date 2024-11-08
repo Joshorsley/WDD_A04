@@ -14,7 +14,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link rel="stylesheet" href="index.css" />
 </head>
 <body>
     <form runat="server">
@@ -58,7 +58,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <p>&copy; <%: DateTime.Now.Year %> - jrice1041 & jhorsley3072 Hi-Lo (Revisited again)</p>
             </footer>
         </div>
     </form>
