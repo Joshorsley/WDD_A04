@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace jhorsley3072_jrice1041_A04
 {
@@ -26,9 +28,31 @@ namespace jhorsley3072_jrice1041_A04
         internal int LowBoundary { get; set; }
         internal int HighBoundary { get; set; }
 
-        internal HiLoGame()
+        internal HiLoGame(GameState startingState)
         {
-            this.State = GameState.Start;
+            this.State = startingState;
+        }
+
+        internal void UpdatePanelVisibility(Panel name, Panel maxGuess, Panel guess)
+        {
+            switch (State)
+            {
+                case GameState.Start:
+                    name.Visible = true;
+                    maxGuess.Visible = false;
+                    guess.Visible = false;
+                    break;
+                case GameState.MaxGuess:
+                    name.Visible = false;
+                    maxGuess.Visible = true;
+                    guess.Visible = false;
+                    break;
+                case GameState.GuessLoop:
+                    name.Visible = false;
+                    maxGuess.Visible = false;
+                    guess.Visible = true;
+                    break;
+            }
         }
     }
 }
