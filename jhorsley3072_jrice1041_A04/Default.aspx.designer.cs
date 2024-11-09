@@ -24,13 +24,13 @@ namespace jhorsley3072_jrice1041_A04
         protected global::System.Web.UI.WebControls.Panel Panel_Name;
 
         /// <summary>
-        /// Label1 control.
+        /// Label_Name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label Label_Name;
 
         /// <summary>
         /// Input_Name control.
@@ -40,15 +40,6 @@ namespace jhorsley3072_jrice1041_A04
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Input_Name;
-
-        /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
 
         /// <summary>
         /// Validator_Name control.
@@ -78,13 +69,31 @@ namespace jhorsley3072_jrice1041_A04
         protected global::System.Web.UI.WebControls.Panel Panel_MaxGuess;
 
         /// <summary>
-        /// TextBox2 control.
+        /// Input_MaxGuess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox Input_MaxGuess;
+
+        /// <summary>
+        /// Validator_MaxGuess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator Validator_MaxGuess;
+
+        /// <summary>
+        /// Submit_MaxGuess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit_MaxGuess;
 
         /// <summary>
         /// Panel_Guess control.
@@ -96,12 +105,66 @@ namespace jhorsley3072_jrice1041_A04
         protected global::System.Web.UI.WebControls.Panel Panel_Guess;
 
         /// <summary>
-        /// TextBox3 control.
+        /// Label_Guess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.Label Label_Guess;
+
+        /// <summary>
+        /// Input_Guess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Input_Guess;
+
+        /// <summary>
+        /// Validator_Guess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator Validator_Guess;
+
+        /// <summary>
+        /// Submit_Guess control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Submit_Guess;
+
+        /// <summary>
+        /// Panel_Win control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel_Win;
+
+        /// <summary>
+        /// Label_Win control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label_Win;
+
+        /// <summary>
+        /// Button_PlayAgain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button_PlayAgain;
     }
 }
