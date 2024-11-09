@@ -1,55 +1,116 @@
 body, html {
-    margin: 0;
-    padding: 0;
+    height: 100%; /* Make sure the body takes up at least the full height of the viewport */
+    margin: 0; /* Remove default margin */
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-   
+    flex-direction: column;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("CSSResources/paper.jpg");
+    background-color: #c9b79c;
+    
 }
 
 .navbar {
     background: linear-gradient( to bottom, #FFCC33 20%, #FF9933 20% 40%, #FF6633 40% 60%, #CC3333 60% 80%, #336699 80% 100% );
     width: 100%;
-    height: 100px; 
+    height: 150px; /* Increase height for a larger navbar */
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; 
-    padding: 0 20px; 
+    padding: 0 20px; /* Adds some horizontal padding */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.container1 {
+.titleContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 20px; /* Increase padding for a more spacious look */
     background-color: white;
     border-radius: 15px;
     border: 5px solid black;
-    max-width: 90%; 
-    box-sizing: border-box; 
+    max-width: 100%;
+    max-height: 80%;
+    box-sizing: border-box;
 }
 
 .navbar-brand {
     font-family: "Bagel Fat One", system-ui;
-    font-size: 20px;
+    font-size: 26px; /* Increase font size */
     color: black;
     text-align: center;
 }
 
 .titleword {
     display: block;
-    line-height: 1;
-    font-size: 20px;
+    line-height: 1.2; /* Slightly increase line height */
+    font-size: 40px; /* Increase font size for prominence */
+    margin-top: 5px;
 }
 
 .gameword {
     font-family: "Miniver", cursive;
-    font-size: 20px;
+    font-size: 30px; /* Increase font size */
+    font-weight: bold;
     display: block;
-    line-height: 1;
+    line-height: 1.2;
     margin-top: -5px;
+    margin-left: 5px;
+    padding-left: 35px;
+    margin-right: -30px;
     color: black;
 }
+
+
+.gameContainer {
+    border: 12px solid #336699;
+    border-radius: 30px;
+    padding: 20px; /* Inner padding for content */
+    max-width: 600px; /* Maximum width */
+    width: 90%; /* Responsive width that scales down on smaller screens */
+    background-color: #c9b79c;
+    box-sizing: border-box;
+    margin: 50px auto 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 20px
+}
+
+input[type="text"] {
+    font-size: 18px;
+    border-radius: 8px;
+    background-color: #fff5f5;
+    border: 2px solid #336699;
+    margin-bottom: 5px;
+}
+
+button {
+    font-size: 12px;
+    color: white;
+    background-color: #FF6633;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 0;
+}
+
+    button:hover {
+        background-color: #CC3333;
+    }
+
+#footer {
+    position:relative;
+    bottom: 0;
+    margin-top: 205px; /* Push the footer to the bottom of the page */
+    color: white; /* Footer text color */
+    text-align: left;
+    margin-left: -100px;
+    padding: 0px; /* Padding for the footer */
+}
+
