@@ -44,7 +44,7 @@
         </asp:ScriptManager>
 
         <nav class="navbar">
-            <div class="container1">
+            <div class="titleContainer">
                 <p class="navbar-brand">
                     <span class="titleword">Hi-Lo</span>
                     <span class="gameword">game</span>
@@ -54,8 +54,7 @@
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
+            <footer id="footer">
                 <p>&copy; <%: DateTime.Now.Year %> - jrice1041 & jhorsley3072 Hi-Lo (Revisited again)</p>
             </footer>
         </div>

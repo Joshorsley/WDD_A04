@@ -27,7 +27,7 @@ namespace jhorsley3072_jrice1041_A04
 
             }
         }
-
+        
         protected void Validator_Name_ServerValidate(object source, ServerValidateEventArgs args)
         {
             if(Input_Name.Text.Contains(" ")){
