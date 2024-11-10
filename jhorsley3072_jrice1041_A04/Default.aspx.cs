@@ -28,8 +28,11 @@ namespace jhorsley3072_jrice1041_A04
             {
                 var game = (HiLoGame)Session["game"];
                 game.PlayerName = Input_Name.Text;
+                PlayerName.Text = "Hello: " + Input_Name.Text + "!";
+                PlayerName.Visible = true;
+
                 game.State = HiLoGame.GameState.MaxGuess;
-                game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
+                game.UpdatePanelVisibility(Panel_DisplayName, Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
                 Session["game"] = game;
             }
             
@@ -43,7 +46,7 @@ namespace jhorsley3072_jrice1041_A04
                 game.HighBoundary = int.Parse(Input_MaxGuess.Text);
                 game.GenerateTargetNumber();
                 game.State = HiLoGame.GameState.GuessLoop;
-                game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
+                game.UpdatePanelVisibility(Panel_DisplayName, Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
                 Label_Guess.Text = $"Please enter a guess between {game.LowBoundary} - {game.HighBoundary}";
                 Session["game"] = game;
             }
@@ -75,7 +78,7 @@ namespace jhorsley3072_jrice1041_A04
                     Input_MaxGuess.Text = "";
                     Input_Name.Text = "";
                     game.State = HiLoGame.GameState.Won;
-                    game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
+                    game.UpdatePanelVisibility(Panel_DisplayName, Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
                 }
                 Session["game"] = game;
             }
@@ -88,7 +91,7 @@ namespace jhorsley3072_jrice1041_A04
             game.HighBoundary = 999;
             game.TargetNumber = -1;
             game.State = HiLoGame.GameState.MaxGuess;
-            game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
+            game.UpdatePanelVisibility(Panel_DisplayName, Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
             Session["game"] = game;
         }
 

@@ -12,6 +12,20 @@
                         <div class="border3">
                             <div class="content">
                                 <div class="gameContainer">
+
+                                    <asp:Panel
+                                        ID="Panel_DisplayName"
+                                        runat="server"
+                                        Visible="false"
+                                        Style="text-align: center">
+                                        <asp:Label
+                                            ID="PlayerName"
+                                            runat="server"
+                                            Visible="false">
+                                        </asp:Label>
+                                    </asp:Panel>
+                                    
+
                                     <!-- Name Panel -->
                                     <asp:Panel
                                         ID="Panel_Name"

@@ -42,29 +42,33 @@ namespace jhorsley3072_jrice1041_A04
             TargetNumber = rand.Next(HighBoundary) + 1;
         }
 
-        internal void UpdatePanelVisibility(Panel name, Panel maxGuess, Panel guess, Panel win)
+        internal void UpdatePanelVisibility(Panel displayName, Panel name, Panel maxGuess, Panel guess, Panel win)
         {
             switch (State)
             {
                 case GameState.Start:
+                    displayName.Visible = false;
                     name.Visible = true;
                     maxGuess.Visible = false;
                     guess.Visible = false;
                     win.Visible = false;
                     break;
                 case GameState.MaxGuess:
+                    displayName.Visible = true;
                     name.Visible = false;
                     maxGuess.Visible = true;
                     guess.Visible = false;
                     win.Visible = false;
                     break;
                 case GameState.GuessLoop:
+                    displayName.Visible = true;
                     name.Visible = false;
                     maxGuess.Visible = false;
                     guess.Visible = true;
                     win.Visible = false;
                     break;
                 case GameState.Won:
+                    displayName.Visible = false;
                     name.Visible = false;
                     maxGuess.Visible = false;
                     guess.Visible = false;
