@@ -1,4 +1,22 @@
-﻿using System;
+﻿/*
+FILE : HiLoGame.cs
+PROJECT : A04 - Hi-Lo ASP.NET
+PROGRAMMER : Josh Horsley, Josh Rice
+FIRST VERSION : 2024-11-04
+DESCRIPTION :
+
+    Game object.
+
+    Has properties to store all needed variables.
+
+    Function to set panel show/hide based on GameState enum.
+
+    Function to generate random number when game begins.
+
+*/
+
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;

@@ -1,4 +1,24 @@
-﻿using Microsoft.Ajax.Utilities;
+﻿/*
+FILE : Default.aspx.cs
+PROJECT : A04 - Hi-Lo ASP.NET
+PROGRAMMER : Josh Horsley
+FIRST VERSION : 2024-11-04
+DESCRIPTION :
+
+    Logic for the full game.
+
+    All info is stored in a game object, stored in SESSION variables between updates.
+        Page_load checks if game object exists, if not -> Instantiate one & store in Session["game"]
+    
+    Each panel on the Default.aspx screen has its own validator/submit button, with associated
+    functionality here.
+    
+    Custom validators are used for all, and error message is changed appropriately since we couldn't figure 
+    out getting multiple validator types to only take up 1 line in the UI.
+
+*/
+
+using Microsoft.Ajax.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

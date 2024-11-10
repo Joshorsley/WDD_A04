@@ -1,3 +1,15 @@
+/*
+FILE : index.css
+PROJECT : A04 - Hi-Lo ASP.NET
+PROGRAMMER : Josh Horsley
+FIRST VERSION : 2024-11-04
+DESCRIPTION :
+
+    Css styling for the "gameshow" look.
+
+    This covers styling for BOTH master and Default.aspx
+
+*/
 body, html {
     height: 100%;
     margin: 0;
@@ -10,7 +22,7 @@ body, html {
     background-attachment: fixed;
     background-image: url("CSSResources/paper.jpg");
     background-color: #c9b79c;
-    align-content:center;
+    align-content: center;
 }
 
 .navbar {

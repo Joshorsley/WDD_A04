@@ -2,6 +2,20 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
+<!--
+FILE : Default.aspx
+PROJECT : A04 - Hi-Lo ASP.NET
+PROGRAMMER : Josh Horsley, Josh Rice
+FIRST VERSION : 2024-11-04
+DESCRIPTION :
+
+    Only this page for the whole game.
+
+    Each "screen" is a panel with input, validator, and submit button.
+
+    Default.aspx.cs handles Show/Hide logic on top of validation, etc.
+
+-->
     <main>
         <section class="row" aria-labelledby="aspnetTitle">
 
