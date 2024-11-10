@@ -15,22 +15,24 @@ namespace jhorsley3072_jrice1041_A04
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(game == null)
+            if(Session["game"] == null)
             {
-                game = new HiLoGame(HiLoGame.GameState.Start);
+                Session["game"] = new HiLoGame(HiLoGame.GameState.Start);
             }
         }
 
         protected void Submit_Name_Click(object sender, EventArgs e)
         {
-
             if (Page.IsValid)
             {
+                var game = (HiLoGame)Session["game"];
                 game.PlayerName = Input_Name.Text;
                 game.State = HiLoGame.GameState.MaxGuess;
                 game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
-
+                Session["game"] = game;
             }
+            
+
         }
         protected void Submit_MaxGuess_Click(object sender, EventArgs e)
         {
