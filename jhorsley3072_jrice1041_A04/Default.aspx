@@ -6,7 +6,7 @@
         <section class="row" aria-labelledby="aspnetTitle">
 
 
-            <div class="border-wrapper">
+            
                 <div class="border1">
                     <div class="border2">
                         <div class="border3">
