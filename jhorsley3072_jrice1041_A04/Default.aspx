@@ -53,7 +53,7 @@
                                         runat="server"
                                         Style="text-align: center"
                                         Visible="false">
-                                        Enter a maximum guess to start the game (1-999)<br />
+                                        Enter a maximum guess for the game <br /> (1-999)
                                         <br />
                                         <asp:TextBox
                                             ID="Input_MaxGuess"

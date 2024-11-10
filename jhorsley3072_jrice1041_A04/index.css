@@ -65,9 +65,6 @@ body, html {
     color: black;
 }
 
-
-
-
 .gameContainer {
     border: 8px solid #336699;
     border-radius: 0px 92px 0px 92px;
@@ -125,7 +122,7 @@ button {
     padding: 0px;
     border-radius: 0px 120px 0px 120px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -135,7 +132,7 @@ button {
     padding: 0px;
     border-radius: 0px 110px 0px 110px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .border3 {
@@ -143,5 +140,5 @@ button {
     padding: 0px;
     border-radius: 0px 100px 0px 100px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
 }
