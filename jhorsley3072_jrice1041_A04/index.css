@@ -78,7 +78,9 @@ body, html {
     font-weight: bold;
     font-size: 20px;
 }
-
+.validator {
+    color: #CC3333;
+}
 
 input[type="text"] {
     font-size: 18px;
