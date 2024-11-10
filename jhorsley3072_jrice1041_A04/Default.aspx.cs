@@ -38,25 +38,27 @@ namespace jhorsley3072_jrice1041_A04
         {
             if (Page.IsValid)
             {
-                //Set high boundary to MaxGuess, generate random target number
+                var game = (HiLoGame)Session["game"];
                 game.HighBoundary = int.Parse(Input_MaxGuess.Text);
                 game.GenerateTargetNumber();
-
-                //Update show/hide panels
                 game.State = HiLoGame.GameState.GuessLoop;
                 game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
                 Label_Guess.Text = $"Please enter a guess between {game.LowBoundary} - {game.HighBoundary}";
+                Session["game"] = game;
             }
         }
+
         protected void Submit_Guess_Click(object sender, EventArgs e)
         {
             if (Page.IsValid)
             {
+                var game = (HiLoGame)Session["game"];
                 int guess = int.Parse(Input_Guess.Text);
                 Input_Guess.Text = "";
-                if(guess > game.TargetNumber)
+
+                if (guess > game.TargetNumber)
                 {
-                    game.HighBoundary = guess - 1; 
+                    game.HighBoundary = guess - 1;
                 }
                 if (guess < game.TargetNumber)
                 {
@@ -64,22 +66,25 @@ namespace jhorsley3072_jrice1041_A04
                 }
                 else
                 {
-                game.State = HiLoGame.GameState.Won;
-                game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
+                    game.State = HiLoGame.GameState.Won;
+                    game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
                 }
                 Label_Guess.Text = $"Please enter a guess between {game.LowBoundary} - {game.HighBoundary}";
+                Session["game"] = game;
             }
         }
 
         protected void PlayAgain_Click(object sender, EventArgs e)
         {
+            var game = (HiLoGame)Session["game"];
             game.LowBoundary = 1;
             game.HighBoundary = 999;
             game.TargetNumber = -1;
-
             game.State = HiLoGame.GameState.MaxGuess;
             game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
+            Session["game"] = game;
         }
+
 
         protected void Validator_Name_ServerValidate(object source, ServerValidateEventArgs args)
         {
