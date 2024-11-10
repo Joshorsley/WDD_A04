@@ -129,7 +129,7 @@ namespace jhorsley3072_jrice1041_A04
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator Validator_Guess;
+        protected global::System.Web.UI.WebControls.CustomValidator Validator_Guess;
 
         /// <summary>
         /// Submit_Guess control.

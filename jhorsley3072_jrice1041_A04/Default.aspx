@@ -97,17 +97,15 @@
                                             TextMode="Number">
                                         </asp:TextBox>
                                         <br />
-                                        <asp:RangeValidator
-                                            ID="Validator_Guess"
-                                            CssClass="validator"
+                                        <asp:CustomValidator 
+                                            ID="Validator_Guess" 
                                             runat="server"
-                                            ControlToValidate="Input_Guess"
-                                            MinimumValue="1"
-                                            MaximumValue="1000"
-                                            Type="Integer"
-                                            ErrorMessage="[no error message provided]"
-                                            ValidationGroup="ValidationGroup_Guess">
-                                        </asp:RangeValidator>
+                                            CssClass="validator"
+                                            ErrorMessage="[no error message provided]" 
+                                            OnServerValidate="Validator_Guess_ServerValidate"
+                                            ValidationGroup="ValidationGroup_Guess"
+                                            ></asp:CustomValidator>
+
                                         <br />
                                         <asp:Button
                                             ID="Submit_Guess"
