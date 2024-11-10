@@ -39,7 +39,7 @@ namespace jhorsley3072_jrice1041_A04
         internal void GenerateTargetNumber()
         {
             Random rand = new Random(DateTime.Now.Second);
-            TargetNumber = rand.Next(HighBoundary + 1) + 1;
+            TargetNumber = rand.Next(HighBoundary) + 1;
         }
 
         internal void UpdatePanelVisibility(Panel name, Panel maxGuess, Panel guess, Panel win)
@@ -63,6 +63,12 @@ namespace jhorsley3072_jrice1041_A04
                     maxGuess.Visible = false;
                     guess.Visible = true;
                     win.Visible = false;
+                    break;
+                case GameState.Won:
+                    name.Visible = false;
+                    maxGuess.Visible = false;
+                    guess.Visible = false;
+                    win.Visible = true;
                     break;
             }
         }

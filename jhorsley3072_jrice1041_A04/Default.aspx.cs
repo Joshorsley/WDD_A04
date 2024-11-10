@@ -19,6 +19,7 @@ namespace jhorsley3072_jrice1041_A04
             {
                 Session["game"] = new HiLoGame(HiLoGame.GameState.Start);
             }
+
         }
 
         protected void Submit_Name_Click(object sender, EventArgs e)
@@ -59,17 +60,23 @@ namespace jhorsley3072_jrice1041_A04
                 if (guess > game.TargetNumber)
                 {
                     game.HighBoundary = guess - 1;
+                    Label_Guess.Text = $"Please enter a guess between {game.LowBoundary} - {game.HighBoundary}";
+
                 }
-                if (guess < game.TargetNumber)
+                else if (guess < game.TargetNumber)
                 {
                     game.LowBoundary = guess + 1;
+                    Label_Guess.Text = $"Please enter a guess between {game.LowBoundary} - {game.HighBoundary}";
+
                 }
                 else
                 {
+                    Input_Guess.Text = "";
+                    Input_MaxGuess.Text = "";
+                    Input_Name.Text = "";
                     game.State = HiLoGame.GameState.Won;
                     game.UpdatePanelVisibility(Panel_Name, Panel_MaxGuess, Panel_Guess, Panel_Win);
                 }
-                Label_Guess.Text = $"Please enter a guess between {game.LowBoundary} - {game.HighBoundary}";
                 Session["game"] = game;
             }
         }
@@ -125,6 +132,7 @@ namespace jhorsley3072_jrice1041_A04
 
         protected void Validator_Guess_ServerValidate(object source, ServerValidateEventArgs args)
         {
+            HiLoGame game = (HiLoGame)Session["game"];
             int guess;
             bool successfulParse = int.TryParse(Input_Guess.Text, out guess);
 
